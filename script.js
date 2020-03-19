@@ -186,4 +186,4 @@ function userInput() {
         });
     });
 }
-main();
+userInput().then(function (input) { return showForecast(input).then(function (output) { return console.log(output); }); });

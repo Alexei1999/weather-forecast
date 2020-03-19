@@ -110,12 +110,6 @@ async function showForecast(requestedPlace: any): Promise<any> {
         }
     }
 }
-async function main(): Promise<void> {
-
-    let input: string = await userInput();
-    let answer: any = await showForecast(input);
-    console.log(answer);
-}
 function userInput(): Promise<string> {
     const rl = readline.createInterface({
         input: process.stdin,
@@ -129,4 +123,4 @@ function userInput(): Promise<string> {
     });
 }
 
-main();
+userInput().then(input => showForecast(input).then(output => console.log(output)));
