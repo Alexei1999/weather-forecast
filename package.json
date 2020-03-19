@@ -1,0 +1,22 @@
+{
+  "name": "leha",
+  "version": "1.0.0",
+  "description": "leha tj smoscheh crasava!!! tak dershac'!!!",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "dev": "nodemon script.js"
+  },
+  "keywords": [
+    "leha"
+  ],
+  "author": "Leha AO",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "nodemon": "^2.0.2"
+  }
+}
