@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    var _ = { label: 0, sent: function () { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function () { return this; }), g;
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
@@ -106,26 +106,7 @@ function showForecast(requestedPlace) {
                 "│" + dataTable[0][2] + "│" + dataTable[1][2] + "│",
                 "└" + insertHyphens(columnWidth[0]) + "┴" + insertHyphens(columnWidth[1]) + "┘",
             ];
-            function addSpaces(str, c) {
-                return new Array(c - str.length + 1).join(' ');
-            }
-            function alignWithSpaces(strTable, c) {
-                return strTable.map(function (s) { return Array.isArray(s) ? alignWithSpaces(s, c) : s + addSpaces(String(s), c); });
-            }
-            function insertHyphens(c) {
-                return new Array(c + 1).join("─");
-            }
-            function fillWithHyphens(str, c) {
-                if ((c - str.length) % 2 != 0)
-                    str += "─";
-                return insertHyphens((c - str.length) / 2) + str + insertHyphens((c - str.length) / 2);
-            }
-            function findMaxLength(arr) {
-                return Math.max.apply(Math, arr);
-            }
-            function tableLengths(strTable) {
-                return strTable.map(function (s) { return Array.isArray(s) ? tableLengths(s) : String(s).length; });
-            }
+
         }
         var places, er_1, placesDataArray;
         return __generator(this, function (_a) {
@@ -151,25 +132,10 @@ function showForecast(requestedPlace) {
                             placeName: s.place_name
                         };
                     });
-                    return [2 /*return*/, Promise.all(placesDataArray.map(function (s) { return requireForecast(s.latitude, s.longitude)
-                            .then(function (e) { return displayForecast(e, s.placeName); })["catch"](function (er) { return er; }); }))];
-            }
-        });
-    });
-}
-function main() {
-    return __awaiter(this, void 0, void 0, function () {
-        var input, answer;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, userInput()];
-                case 1:
-                    input = _a.sent();
-                    return [4 /*yield*/, showForecast(input)];
-                case 2:
-                    answer = _a.sent();
-                    console.log(answer);
-                    return [2 /*return*/];
+                    return [2 /*return*/, Promise.all(placesDataArray.map(function (s) {
+                        return requireForecast(s.latitude, s.longitude)
+                            .then(function (e) { return displayForecast(e, s.placeName); })["catch"](function (er) { return er; });
+                    }))];
             }
         });
     });
@@ -186,4 +152,5 @@ function userInput() {
         });
     });
 }
-userInput().then(function (input) { return showForecast(input).then(function (output) { return console.log(output); }); });
+// userInput().then(input => showForecast(input).then(output => console.log(output)));
+console.log(['bbb\naaa]']);
