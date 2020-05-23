@@ -36,8 +36,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-var darkSkyKey = '<your darkSky key>';
-var mapBoxKey = '<you mapBox key>';
+var darkSkyKey = '523130e12259d2881cca1291f16e4f6f';
+var mapBoxKey = 'pk.eyJ1Ijoic2hhbGVueWkiLCJhIjoiY2s3eHdsbzBsMDBwNzNlcnQ1cW1vc2N4ZyJ9.UAxB_mvsXh4QMioxPdbtMg';
 var readline = require('readline');
 var https = require('https');
 function showForecast(requestedPlace) {

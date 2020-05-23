@@ -1,7 +1,11 @@
-import { Http2SecureServer } from "http2";
+const yaml = require('js-yaml')
+const fs = require('fs')
 
-let darkSkyKey: string = '<your darkSky key>';
-let mapBoxKey: string = '<you mapBox key>';
+let fileContents = fs.readFileSync(__dirname + '/tokens.yaml', 'utf8');
+let data = yaml.safeLoad(fileContents);
+
+let darkSkyKey: string = data.darkSkyKey;
+let mapBoxKey: string = data.mapBoxKey;
 
 const readline = require('readline');
 const https = require('https');
