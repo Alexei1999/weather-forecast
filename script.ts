@@ -1,5 +1,5 @@
-const yaml = require('js-yaml')
-const fs = require('fs')
+import yaml from 'js-yaml';
+import fs from 'fs';
 
 let fileContents = fs.readFileSync(__dirname + '/tokens.yaml', 'utf8');
 let data = yaml.safeLoad(fileContents);
@@ -7,8 +7,8 @@ let data = yaml.safeLoad(fileContents);
 let darkSkyKey: string = data.darkSkyKey;
 let mapBoxKey: string = data.mapBoxKey;
 
-const readline = require('readline');
-const https = require('https');
+import readline from 'readline';
+import https from 'https';
 
 async function showForecast(requestedPlace: any): Promise<any> {
     let places: any | undefined;
